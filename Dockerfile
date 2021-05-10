@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/f33/fedora-toolbox:33
+FROM registry.fedoraproject.org/fedora-toolbox:33
 
 LABEL maintainer="Pierre Prinetti <pierreprinetti@redhat.com>"
 
