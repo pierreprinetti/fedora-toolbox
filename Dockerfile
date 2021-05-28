@@ -13,6 +13,7 @@ RUN dnf -y install \
 	glances \
 	golang \
 	make \
+	mosh \
 	ripgrep \
 	tmate \
 	tmux \
