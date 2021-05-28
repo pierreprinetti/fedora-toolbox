@@ -5,6 +5,7 @@ LABEL maintainer="Pierre Prinetti <pierreprinetti@redhat.com>"
 RUN dnf -y upgrade
 RUN dnf -y install \
 	ShellCheck \
+	ansible \
 	autojump-zsh \
 	bind-utils \
 	fd-find \
