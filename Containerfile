@@ -10,6 +10,7 @@ RUN dnf -y install \
 	glances \
 	make \
 	mosh \
+	neovim \
 	ripgrep \
 	tmate \
 	tmux \
