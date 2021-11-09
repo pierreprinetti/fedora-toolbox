@@ -13,4 +13,5 @@ RUN dnf -y install \
 	bind-utils \
 	git-crypt \
 	golang \
-	python3-octaviaclient
+	python3-octaviaclient \
+	python3-pip
