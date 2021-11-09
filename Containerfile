@@ -1,18 +1,13 @@
-FROM registry.fedoraproject.org/fedora-toolbox:34
+FROM registry.fedoraproject.org/fedora-toolbox:35
 
 LABEL maintainer="Pierre Prinetti <pierreprinetti@redhat.com>"
 
 RUN dnf -y upgrade
 RUN dnf -y install \
-	ShellCheck \
-	ansible \
 	autojump-zsh \
-	bind-utils \
 	fd-find \
 	fzf \
-	git-crypt \
 	glances \
-	golang \
 	make \
 	mosh \
 	ripgrep \
