@@ -12,6 +12,7 @@ RUN dnf -y install \
 	mosh \
 	neovim \
 	ripgrep \
+	task \
 	tmate \
 	tmux \
 	wl-clipboard \
