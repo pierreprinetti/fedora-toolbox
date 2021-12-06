@@ -4,7 +4,6 @@ LABEL maintainer="Pierre Prinetti <pierreprinetti@redhat.com>"
 
 RUN dnf -y upgrade
 RUN dnf -y install \
-	autojump-zsh \
 	fd-find \
 	fzf \
 	glances \
@@ -16,6 +15,7 @@ RUN dnf -y install \
 	tmate \
 	tmux \
 	wl-clipboard \
-	zsh
+	zsh \
+	z
 
 RUN echo 'export ZDOTDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh"' >> /etc/zshenv
