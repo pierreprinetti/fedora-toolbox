@@ -6,7 +6,6 @@ RUN dnf -y upgrade
 RUN dnf -y install \
 	fd-find \
 	fzf \
-	glances \
 	make \
 	mosh \
 	neovim \
