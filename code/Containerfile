@@ -18,5 +18,6 @@ RUN \
 		git-crypt \
 		golang \
 		jq \
+		nodejs \
 		python3-octaviaclient \
 		python3-pip
