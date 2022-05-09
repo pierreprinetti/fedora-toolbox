@@ -7,12 +7,16 @@ COPY --from=rust \
 	/usr/local/cargo/bin/cargo \
 	/usr/bin/
 
-RUN dnf -y install \
-	ShellCheck \
-	ansible \
-	bind-utils \
-	git-crypt \
-	golang \
-	jq \
-	python3-octaviaclient \
-	python3-pip
+
+RUN \
+	dnf -y copr enable agriffis/neovim-nightly \
+	&& dnf -y upgrade \
+	&& dnf -y install \
+		ShellCheck \
+		ansible \
+		bind-utils \
+		git-crypt \
+		golang \
+		jq \
+		python3-octaviaclient \
+		python3-pip
