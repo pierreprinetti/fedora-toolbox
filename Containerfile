@@ -9,6 +9,7 @@ RUN dnf -y install \
 	make \
 	mosh \
 	neovim \
+	python3-neovim \
 	ripgrep \
 	task \
 	tmate \
