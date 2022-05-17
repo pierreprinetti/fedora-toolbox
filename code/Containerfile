@@ -15,6 +15,7 @@ RUN \
 		ansible \
 		bind-utils \
 		git-crypt \
+		gettext \
 		golang \
 		jq \
 		nodejs \
