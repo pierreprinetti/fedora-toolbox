@@ -24,3 +24,5 @@ RUN \
 		python3-octaviaclient \
 		python3-pip \
 		vim-common
+
+RUN npm install -g yaml-language-server
