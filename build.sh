@@ -2,11 +2,10 @@
 
 set -Eeuo pipefail
 
-podman pull registry.fedoraproject.org/fedora-toolbox:36
-podman pull docker.io/library/rust:latest
+podman pull registry.fedoraproject.org/fedora-toolbox:37
 
-podman build -t quay.io/pierreprinetti/fedora-toolbox:36 .
+podman build -t quay.io/pierreprinetti/fedora-toolbox:37 .
 
 for image in code keybase restic; do
-	podman build -t "quay.io/pierreprinetti/fedora-toolbox:36-${image}" -f "${image}/Containerfile" .
+	podman build -t "quay.io/pierreprinetti/fedora-toolbox:37-${image}" -f "${image}/Containerfile" .
 done

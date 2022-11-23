@@ -1,5 +1,5 @@
 FROM docker.io/library/rust:latest AS rust
-FROM quay.io/pierreprinetti/fedora-toolbox:36
+FROM quay.io/pierreprinetti/fedora-toolbox:37
 
 COPY --from=rust \
 	/usr/local/cargo/bin/rustc \
