@@ -20,3 +20,5 @@ RUN \
 		z
 
 RUN echo 'export ZDOTDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh"' >> /etc/zshenv
+
+RUN curl -sS https://starship.rs/install.sh | sh /dev/stdin --yes
