@@ -14,7 +14,6 @@ RUN \
 		ShellCheck \
 		ansible \
 		bind-utils \
-		git-crypt \
 		gettext \
 		golang \
 		jq \
