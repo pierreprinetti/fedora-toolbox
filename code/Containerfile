@@ -21,6 +21,7 @@ RUN \
 		jq \
 		nodejs \
 		openssl-devel \
+		python3-devel \
 		python3-octaviaclient \
 		python3-pip \
 		vim-common
