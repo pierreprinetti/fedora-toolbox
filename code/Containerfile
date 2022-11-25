@@ -14,12 +14,13 @@ RUN \
 		ShellCheck \
 		ansible \
 		bind-utils \
+		ctags \
+		gcc-c++ \
 		gettext \
 		golang \
 		jq \
 		nodejs \
 		openssl-devel \
-		gcc-c++ \
 		python3-octaviaclient \
 		python3-pip \
 		vim-common
