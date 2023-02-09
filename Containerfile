@@ -11,6 +11,7 @@ RUN \
 		mosh \
 		neovim \
 		python3-neovim \
+		python-unversioned-command \
 		ripgrep \
 		task \
 		tmate \
