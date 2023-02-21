@@ -1,3 +1,23 @@
-FROM quay.io/pierreprinetti/fedora-toolbox:36
+FROM registry.fedoraproject.org/fedora-toolbox:36
+
+RUN \
+	dnf -y upgrade \
+	&& dnf -y install \
+		fd-find \
+		fzf \
+		make \
+		mosh \
+		neovim \
+		python3-neovim \
+		python-unversioned-command \
+		ripgrep \
+		task \
+		tmate \
+		tmux \
+		wl-clipboard \
+		zsh \
+		z
+RUN echo 'export ZDOTDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh"' >> /etc/zshenv
+RUN curl -sS https://starship.rs/install.sh | sh /dev/stdin --yes
 
 RUN dnf install -y https://prerelease.keybase.io/keybase_amd64.rpm

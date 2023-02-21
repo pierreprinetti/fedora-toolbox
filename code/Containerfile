@@ -1,5 +1,5 @@
 FROM docker.io/library/rust:latest AS rust
-FROM quay.io/pierreprinetti/fedora-toolbox:36
+FROM registry.fedoraproject.org/fedora-toolbox:36
 
 COPY --from=rust \
 	/usr/local/cargo/bin/rustc \
@@ -8,17 +8,43 @@ COPY --from=rust \
 	/usr/bin/
 
 RUN \
+	dnf -y upgrade \
+	&& dnf -y install \
+		fd-find \
+		fzf \
+		make \
+		mosh \
+		neovim \
+		python3-neovim \
+		python-unversioned-command \
+		ripgrep \
+		task \
+		tmate \
+		tmux \
+		wl-clipboard \
+		zsh \
+		z
+RUN echo 'export ZDOTDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh"' >> /etc/zshenv
+RUN curl -sS https://starship.rs/install.sh | sh /dev/stdin --yes
+
+RUN \
 	dnf -y copr enable agriffis/neovim-nightly \
 	&& dnf -y upgrade \
 	&& dnf -y install \
 		ShellCheck \
 		ansible \
 		bind-utils \
-		git-crypt \
+		ctags \
+		gcc-c++ \
+		gettext \
 		golang \
 		jq \
 		nodejs \
 		openssl-devel \
+		python3-devel \
 		python3-octaviaclient \
 		python3-pip \
 		vim-common
+
+RUN npm install -g yaml-language-server
+RUN go install golang.org/x/tools/gopls@latest
