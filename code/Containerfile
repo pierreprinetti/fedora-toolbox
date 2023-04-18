@@ -28,8 +28,7 @@ RUN echo 'export ZDOTDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh"' >> /etc/zshe
 RUN curl -sS https://starship.rs/install.sh | sh /dev/stdin --yes
 
 RUN \
-	dnf -y copr enable agriffis/neovim-nightly \
-	&& dnf -y upgrade \
+	dnf -y upgrade \
 	&& dnf -y install \
 		ShellCheck \
 		ansible \
