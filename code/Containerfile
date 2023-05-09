@@ -11,6 +11,7 @@ RUN \
 	dnf -y upgrade \
 	&& dnf -y install \
 		fd-find \
+		foot-terminfo \
 		fzf \
 		make \
 		mosh \
