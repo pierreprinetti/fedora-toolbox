@@ -16,15 +16,17 @@ RUN \
 		make \
 		mosh \
 		neovim \
-		python3-neovim \
 		python-unversioned-command \
+		python3-neovim \
 		ripgrep \
 		task \
 		tmate \
 		tmux \
 		wl-clipboard \
+		z \
 		zsh \
-		z
+		zstd
+
 RUN echo 'export ZDOTDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh"' >> /etc/zshenv
 RUN curl -sS https://starship.rs/install.sh | sh /dev/stdin --yes
 
