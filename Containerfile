@@ -1,5 +1,5 @@
 FROM docker.io/library/rust:latest AS rust
-FROM registry.fedoraproject.org/fedora-toolbox:38
+FROM registry.fedoraproject.org/fedora-toolbox:39
 
 COPY --from=rust \
 	/usr/local/cargo/bin/rustc \
