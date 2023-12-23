@@ -10,6 +10,7 @@ COPY --from=rust \
 RUN \
 	dnf -y upgrade \
 	&& dnf -y install \
+		entr \
 		fd-find \
 		foot-terminfo \
 		fzf \
