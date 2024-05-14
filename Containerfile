@@ -17,8 +17,10 @@ RUN \
 		make \
 		mosh \
 		neovim \
+		pass \
 		python-unversioned-command \
 		python3-neovim \
+		restic \
 		ripgrep \
 		task \
 		tmate \
