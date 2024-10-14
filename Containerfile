@@ -12,6 +12,7 @@ RUN \
 	&& dnf -y install \
 		ShellCheck \
 		ansible \
+		asciinema \
 		awscli \
 		bind-utils \
 		ctags \
