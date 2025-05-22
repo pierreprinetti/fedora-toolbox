@@ -53,3 +53,9 @@ RUN curl -sS https://starship.rs/install.sh | sh /dev/stdin --yes
 
 RUN npm install -g yaml-language-server
 RUN go install golang.org/x/tools/gopls@latest
+
+
+# Install gh https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+RUN dnf install dnf5-plugins
+RUN dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
+RUN dnf install gh --repo gh-cli
